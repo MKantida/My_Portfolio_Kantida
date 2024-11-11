@@ -1,0 +1,27 @@
+php artisan make:migration create_ใส่ชื่อตาราง_table
+php artisan migrate รันในการสร้างตาราง
+
+//สำหรับจัดการข้อมูลที่เชื่อมโยงกับฐานข้อมูล
+php artisan make:model Address
+//สำหรับการสร้างข้อมูลตัวอย่าง สำหรับการทดสอบ
+php artisan make:factory AddressFactory 
+//สำหรับการเพิ่มข้อมูลตัวอย่างลงในฐานข้อมูล
+php artisan make:seeders AddressSeeders 
+
+ php artisan db:seed    รันข้อมูลตัวอย่างลงดาต้าเบส  
+ 
+///หากคุณต้องการให้คอนโทรลเลอร์มี resource methods เช่น index, create, store, show, edit, update, destroy ให้ใช้คำสั่งนี้:
+ php artisan make:controller UniversityController --resource
+
+ ///Controller ที่มี resource methods และผูกกับโมเดลได้โดยใช้คำสั่งนี้:
+ php artisan make:controller UniversityController --model=University
+
+
+
+การสร้างคอนโทรลเลอร์
+php artisan make:controller UniversityController
+php artisan make:controller UniversityController
+
+
+ALTER TABLE tb_university
+DROP FOREIGN KEY tb_university_school_id_foreign; 
